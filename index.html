@@ -51,12 +51,6 @@
     
  <script data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/overrideGlobals.inline.a0376430.bundle.min.js">!function(){"use strict";const e=e=>"string"==typeof e?decodeURIComponent(e).toLowerCase().trimStart():e,t=(e,t,r,o)=>{"object"==typeof t&&"function"==typeof t.get&&"function"==typeof t.set?Object.defineProperty(r||globalThis,e,{get:t.get,set:t.set,configurable:!1,enumerable:o||!1}):Object.defineProperty(r||globalThis,e,{value:t,writable:!1,configurable:!1,enumerable:o||!1})},r=()=>{const e=globalThis.open,t=document.open,r=(t,r,o)=>{const n="string"!=typeof t,s=e.call(window,t,r,o);return n||((c=t).startsWith("//")&&/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g.test(`${location.protocol}:${c}`)&&(c=`${location.protocol}${c}`),!c.startsWith("http")||new URL(c).hostname===location.hostname)?{}:s;var c};defineStrictProperty("open",r,globalThis,!0),defineStrictProperty("open",((e,o,n)=>e?r(e,o,n):t.call(document,e,o,n)),document,!0)},o=document.createElement,n=(t,r)=>{const n=o.call(document,t,r),s=Element.prototype.setAttribute,c=Element.prototype.setAttributeNS;if("iframe"===e(t)){globalThis.defineStrictProperty("srcdoc",{get:()=>{},set:()=>{console.error("`srcdoc` is not allowed in iframe elements.")}},n,!1);const e=function(e,t){"srcdoc"!==e.toLowerCase()?s.call(n,e,t):console.error("`srcdoc` attribute is not allowed to be set.")},t=function(e,t,r){"srcdoc"!==t.toLowerCase()?c.call(n,e,t,r):console.error("`srcdoc` attribute is not allowed to be set.")};n.setAttribute=e,n.setAttributeNS=t}return n},s="client-binding",c="security_overrideGlobals",i=["/_api/v1/access-tokens","/_api/v2/dynamicmodel"],a=e=>(e instanceof Headers?e.forEach(((t,r)=>{decodeURIComponent(r).toLowerCase()===s&&e.delete(r)})):Object.keys(e).forEach((t=>{decodeURIComponent(t).toLowerCase()===s&&delete e[t]})),e),l=t=>{let r=!0;const o=(e=>{let t,r;if(globalThis.Request&&e instanceof Request)t=e.url;else{if("function"!=typeof e?.toString)throw new Error("Unsupported type for url");t=e.toString()}try{return new URL(t).pathname}catch(e){return r=t.replace(/#.+/gi,"").split("?").shift(),r.startsWith("/")?r:`/${r}`}})(t),n=e(o);return i.some((e=>n.includes(e)))&&(r=!1),r},d=(e=globalThis)=>{const t=fetch;e.defineStrictProperty("fetch",(function(){const r=(e=>{if(globalThis.Request&&e[0]instanceof Request&&e[0]?.headers){const t=a(e[0].headers);e[0]=new Request(e[0].url,{...e[0],headers:t})}else(e[0]instanceof URL&&e[1]?.headers instanceof Headers||e[1]?.headers)&&(e[1].headers=a(e[1].headers));return e})(arguments);return l(arguments[0])?t.apply(e,Array.from(r)):new Promise(((e,t)=>{const r=new Error("TB002");window.fedops?.reportError(r,c),t(r)}))}))};performance.mark("overrideGlobals started");const{experiments:p}=window.viewerModel;try{((e=globalThis)=>{Object.defineProperty(e,"defineStrictProperty",{value:t,writable:!1,enumerable:!1,configurable:!1})})(),p["specs.thunderbolt.hardenWindowOpen"]&&r(),p["specs.thunderbolt.hardenIFrames"]&&globalThis.defineStrictProperty("createElement",n,document,!0),p["specs.thunderbolt.hardenFetchAndXHR"]&&(d(),((e=globalThis)=>{const t=XMLHttpRequest;e.defineStrictProperty("XMLHttpRequest",(function(){const e=new t,r=e.open,o=e.setRequestHeader;return e.open=function(){if(arguments.length<2||l(arguments[1]))return r.apply(e,Array.from(arguments));{const e=new Error("TB002");throw window.fedops?.reportError(e,c),e}},e.setRequestHeader=function(t,r){decodeURIComponent(t).toLowerCase()!==s&&o.call(e,t,r)},e}))})()),(()=>{let e=[];const{experiments:t}=window.viewerModel;t["specs.thunderbolt.hardenClientGlobals_Text"]&&(e=e.concat(["TextEncoder","TextDecoder"])),t["specs.thunderbolt.hardenClientGlobals_EventTarget"]&&(e=e.concat(["XMLHttpRequestEventTarget","EventTarget"])),t["specs.thunderbolt.hardenClientGlobals_Array_URL_JSON"]&&(e=e.concat(["Array","URL","JSON"])),t["specs.thunderbolt.hardenClientGlobals_EventListener"]&&(e=e.concat(["addEventListener","removeEventListener"])),t["specs.thunderbolt.hardenEncodingDecoding"]&&(e=e.concat(["encodeURI","encodeURIComponent","decodeURI","decodeURIComponent"])),t["specs.thunderbolt.hardenStringAndNumber"]&&(e=e.concat(["String","Number"])),t["specs.thunderbolt.hardenObject"]&&e.push("Object"),e.forEach((e=>{const t=Object.freeze(globalThis[e]);t.hasOwnProperty("prototype")&&"Array"!==e&&Object.freeze(t.prototype),["addEventListener","removeEventListener"].includes(e)&&globalThis.defineStrictProperty(e,document[e],document,!0),globalThis.defineStrictProperty(e,globalThis[e],globalThis,!0)}))})(),p["specs.thunderbolt.hardenTimeout"]&&(defineStrictProperty("preventStringArgument",((e,t,r)=>{const o=r||globalThis,n=o[e];defineStrictProperty(e,(function(){const r=Array.from(arguments);if("string"!=typeof r[t])return n.apply(o,r);console.warn(`Calling ${e} with a String Argument at index ${t} is not allowed`)}),o)})),preventStringArgument("setTimeout",0),preventStringArgument("setInterval",0))}catch(e){window?.viewerModel?.mode.debug&&console.error(e);const t=new Error("TB006");window.fedops?.reportError(t,"security_overrideGlobals"),window.Sentry?window.Sentry.captureException(t):globalThis.defineStrictProperty("sentryBuffer",[t],window,!1)}performance.mark("overrideGlobals ended")}();
 //# sourceMappingURL=https://static.parastorage.com/services/wix-thunderbolt/dist/overrideGlobals.inline.a0376430.bundle.min.js.map</script>
-    
-      <!--pageHtmlEmbeds.head start-->
-      <script type="wix/htmlEmbeds" id="pageHtmlEmbeds.head start"></script>
-      <script type="wix/htmlEmbeds" id="pageHtmlEmbeds.head end"></script>
-      <!--pageHtmlEmbeds.head end-->
-  
 	
 <!-- render-head end -->
 
@@ -84,7 +78,6 @@
 <body class="" data-new-gr-c-s-check-loaded="14.1191.0" data-gr-ext-installed="">
 <script type="text/javascript">
     var bodyCacheable = true;
-    
     var exclusionReason = {"shouldRender":true,"forced":false};
     var ssrInfo = {"cacheExclusionReason":"","renderBodyTime":650,"renderTimeStamp":1723743922733}
 </script>
@@ -113,13 +106,7 @@
     }
 </script>
 
-
-
-
-
-
-
-    <pages-css id="pages-css"><style id="css_masterPage">
+<pages-css id="pages-css"><style id="css_masterPage">
 	
 
 @font-face {
