@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2321141f'/%3E%3Cpath d='M12 43c9-1 12-24 22-23s8 21 18 20M12 28c8 0 11 10 18 9s11-18 22-19' fill='none' stroke='%23b88aa8' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" href="assets/logo-purple.png">
   <style>
     :root {
       color-scheme: dark;
@@ -62,12 +62,22 @@
     .site-title {
       align-self: flex-start;
       margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
       color: rgba(242, 232, 240, .9);
       font-family: var(--serif);
       font-size: clamp(1.65rem, 3vw, 2.1rem);
       font-weight: 300;
       letter-spacing: .025em;
       line-height: 1;
+    }
+
+    .site-logo {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      flex: 0 0 auto;
     }
 
     main {
@@ -176,6 +186,8 @@
     @media (max-width: 620px) {
       body { background-attachment: scroll; background-position: 62% center; }
       .page { width: min(100% - 36px, 760px); padding-top: 34px; }
+      .site-title { gap: 10px; }
+      .site-logo { width: 40px; height: 40px; }
       main { padding: 16vh 0 14vh; }
       h1 {
         font-size: clamp(2.6rem, 13vw, 5rem);
@@ -192,7 +204,10 @@
 </head>
 <body>
   <div class="page">
-    <p class="site-title">Lab Amidst Causality</p>
+    <p class="site-title">
+      <img class="site-logo" src="assets/logo-white.png" alt="">
+      <span>Lab Amidst Causality</span>
+    </p>
 
     <main>
       <h1>June En-Yu Lai</h1>
