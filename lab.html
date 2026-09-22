@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#21141f">
-  <meta name="description" content="June En-Yu Lai — bioinformatics, biostatistics, causal inference, and statistical genetics.">
-  <title>June En-Yu Lai | Lab Amidst Causality</title>
-  <link rel="canonical" href="https://roqe.github.io/">
+  <meta name="description" content="Recruitment and opportunities at Lab Amidst Causality.">
+  <title>Lab@ | Lab Amidst Causality</title>
+  <link rel="canonical" href="https://roqe.github.io/lab.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
@@ -127,49 +127,28 @@
       line-height: .9;
     }
 
-    .fields {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: clamp(4px, 1.15vw, 9px);
-      margin: 38px 0 0;
+    .eyebrow {
+      margin: 30px 0 0;
+      color: rgba(242, 232, 240, .9);
+      font-size: .74rem;
+      font-weight: 300;
+      letter-spacing: .16em;
+      text-transform: uppercase;
     }
 
-    .field {
-      display: inline-block;
-      padding: clamp(4px, .75vw, 5px) clamp(6px, 1.5vw, 12px) clamp(5px, .9vw, 6px);
-      border-radius: 999px;
-      background: rgba(238, 232, 237, .9);
-      color: #2a1926;
-      font-size: clamp(.52rem, 2.4vw, .95rem);
-      font-weight: 400;
-      letter-spacing: clamp(0em, .08vw, .035em);
-      line-height: 1.25;
-      white-space: nowrap;
-    }
-
-    .bio {
+    .recruitment {
       max-width: 680px;
-      margin: 38px 0 0;
+      margin: 24px 0 0;
       color: var(--soft);
       font-size: clamp(1rem, 1.6vw, 1.08rem);
       font-weight: 300;
       line-height: 1.9;
     }
 
-    .bio p { margin: 0; }
+    .recruitment p { margin: 0; }
+    .recruitment p + p { margin-top: 1.15em; }
 
-    .bio p + p { margin-top: 1.15em; }
-
-    .smile {
-      display: inline-block;
-      margin-left: .08em;
-      font-family: var(--serif);
-      font-size: 1.4em;
-      line-height: 0;
-      vertical-align: -.08em;
-    }
-
-    .cv {
+    .contact-link {
       display: inline-block;
       margin-top: 34px;
       padding: 7px 0 4px;
@@ -183,7 +162,7 @@
       transition: border-color .2s ease, color .2s ease;
     }
 
-    .cv:hover {
+    .contact-link:hover {
       color: #fff;
       border-color: #dcc0d5;
     }
@@ -195,27 +174,18 @@
       line-height: 1.65;
     }
 
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px 22px;
-      margin-bottom: 15px;
+    .contact {
+      margin: 0;
+      max-width: 680px;
     }
 
-    .links a,
     .email {
       text-decoration-color: rgba(216, 186, 209, .42);
       text-underline-offset: 4px;
       transition: color .2s ease;
     }
 
-    .links a:hover,
     .email:hover { color: var(--text); }
-
-    .contact {
-      margin: 0;
-      max-width: 680px;
-    }
 
     @media (max-width: 620px) {
       body { background-attachment: scroll; background-position: 62% center; }
@@ -234,7 +204,7 @@
         font-size: clamp(2.6rem, 13vw, 5rem);
         white-space: nowrap;
       }
-      .bio { line-height: 1.75; }
+      .recruitment { line-height: 1.75; }
       footer { font-size: .78rem; }
     }
 
@@ -251,41 +221,31 @@
         <span>Lab Amidst Causality</span>
       </a>
       <nav class="tabs" aria-label="Pages">
-        <a class="tab" href="./" aria-current="page">Me@</a>
-        <a class="tab" href="lab.html">Lab@</a>
+        <a class="tab" href="./">Me@</a>
+        <a class="tab" href="lab.html" aria-current="page">Lab@</a>
       </nav>
     </header>
 
     <main>
-      <h1>June En-Yu Lai</h1>
-      <div class="fields" aria-label="Research fields">
-        <span class="field">#bioinformatics</span>
-        <span class="field">#biostatistics</span>
-        <span class="field">#causal_inference</span>
-      </div>
-      <div class="bio">
+      <h1>Join the Lab</h1>
+      <p class="eyebrow">Recruitment</p>
+      <div class="recruitment">
         <p>
-          I am a postdoctoral fellow at the Institute of Statistical Science, Academia Sinica.
-          I received my PhD in Bioinformatics through the Taiwan International Graduate Program
-          (TIGP). My recent research focuses on the causal assumptions underlying statistical
-          identification. I also work on statistical genetics, causal mediation analysis, and the
-          development of bioinformatics algorithms.
+          We welcome curious students and researchers interested in bioinformatics,
+          biostatistics, causal inference, and statistical genetics.
         </p>
-        <p>I welcome research discussions and collaborations. <span class="smile" aria-label="smile">☺︎</span></p>
+        <p>
+          Opportunities may include research projects, graduate training, and collaboration.
+          More details will be added soon. If our research directions resonate with you,
+          please feel free to get in touch.
+        </p>
       </div>
-      <a class="cv" href="cv.pdf" target="_blank" rel="noreferrer">Curriculum vitae</a>
+      <a class="contact-link" href="mailto:junelai@stat.sinica.edu.tw">Contact us</a>
     </main>
 
     <footer>
-      <div class="links" aria-label="Academic and social profiles">
-        <a href="https://scholar.google.com/citations?user=RMIcjbIAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-        <a href="https://www.linkedin.com/in/june-en-yu-lai/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://orcid.org/0000-0002-3775-5517" target="_blank" rel="noreferrer">ORCID</a>
-        <a href="https://github.com/roqe/" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
       <p class="contact">
-        <a class="email" href="mailto:junelai@stat.sinica.edu.tw">junelai@stat.sinica.edu.tw</a>
-        &nbsp;·&nbsp; +886-2-2787-5727<br>
+        <a class="email" href="mailto:junelai@stat.sinica.edu.tw">junelai@stat.sinica.edu.tw</a><br>
         Institute of Statistical Science, Academia Sinica, Taipei, Taiwan
       </p>
     </footer>
