@@ -96,16 +96,26 @@
     }
 
     .tab {
-      padding: 5px 11px 6px;
+      width: 58px;
+      height: 58px;
+      padding: 0;
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       color: var(--soft);
+      font-family: var(--serif);
       font-size: .72rem;
       font-weight: 300;
-      letter-spacing: .06em;
-      line-height: 1.25;
+      letter-spacing: .025em;
+      line-height: 1;
       text-decoration: none;
       transition: color .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .tab > span {
+      transform: translateY(.08em);
     }
 
     .tab:hover,
@@ -232,7 +242,7 @@
       }
       .site-logo { width: 46px; height: 46px; }
       .tabs { gap: 5px; }
-      .tab { padding: 4px 7px 5px; font-size: .62rem; }
+      .tab { width: 48px; height: 48px; font-size: .68rem; }
       main { padding: 16vh 0 14vh; }
       h1 {
         font-size: clamp(2.6rem, 13vw, 5rem);
@@ -255,8 +265,8 @@
         <span>Lab Amidst Causality</span>
       </a>
       <nav class="tabs" aria-label="Pages">
-        <a class="tab" href="./" aria-current="page">Me@</a>
-        <a class="tab" href="lab.html">Lab@</a>
+        <a class="tab" href="./" aria-current="page"><span>Me@</span></a>
+        <a class="tab" href="lab.html"><span>Lab@</span></a>
       </nav>
     </header>
 
