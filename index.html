@@ -28,6 +28,8 @@
       min-width: 320px;
       min-height: 100%;
       background: #21141f;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     body {
@@ -131,19 +133,21 @@
       display: flex;
       flex-wrap: nowrap;
       gap: clamp(4px, 1.15vw, 9px);
+      max-width: 100%;
       margin: 38px 0 0;
     }
 
     .field {
       display: inline-block;
-      padding: clamp(4px, .75vw, 5px) clamp(6px, 1.5vw, 12px) clamp(5px, .9vw, 6px);
+      min-width: 0;
+      padding: .35em .78em .4em;
       border-radius: 999px;
       background: rgba(238, 232, 237, .9);
       color: #2a1926;
       font-size: clamp(.52rem, 2.4vw, .95rem);
       font-weight: 400;
       letter-spacing: clamp(0em, .08vw, .035em);
-      line-height: 1.25;
+      line-height: 1.15;
       white-space: nowrap;
     }
 
