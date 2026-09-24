@@ -175,18 +175,18 @@
     .recruitment p + p { margin-top: 1.15em; }
 
     .recruitment + .fields {
-      margin-top: 52px;
+      margin-top: 66px;
     }
 
     .collaborators {
-      display: flex;
-      flex-wrap: wrap;
-      gap: clamp(28px, 5vw, 52px);
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: clamp(12px, 2.4vw, 24px);
       margin-top: 26px;
     }
 
     .collaborator {
-      width: 142px;
+      width: auto;
       color: var(--text);
       text-align: center;
       text-decoration: none;
@@ -225,7 +225,12 @@
     }
 
     .collaborator-photo--huang img {
-      object-position: 50% 8%;
+      object-position: 50% 13%;
+      transform: none;
+    }
+
+    .collaborator-photo--yu img {
+      object-position: 50% 20%;
       transform: none;
     }
 
@@ -249,6 +254,10 @@
     }
 
     .collaborator:hover .collaborator-photo--huang img {
+      transform: none;
+    }
+
+    .collaborator:hover .collaborator-photo--yu img {
       transform: none;
     }
 
@@ -345,8 +354,11 @@
         white-space: nowrap;
       }
       .recruitment { line-height: 1.75; }
-      .collaborators { gap: 18px; }
-      .collaborator { width: 126px; }
+      .collaborators {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 18px;
+      }
+      .collaborator { width: auto; }
       .collaborator > img,
       .collaborator-photo { width: 104px; height: 104px; }
       footer { margin-top: 0; font-size: .78rem; }
@@ -387,13 +399,15 @@
           <span class="collaborator-romanization">Yen-Tsung Huang</span>
         </a>
         <a class="collaborator" href="https://scholar.google.com/citations?user=33LmghAAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">
-          <img src="assets/collaborator-jih-chang-yu.webp" width="116" height="116" alt="余日彰 Jih-Chang Yu">
+          <span class="collaborator-photo collaborator-photo--yu">
+            <img src="assets/collaborator-jih-chang-yu-beach.webp" width="553" height="600" alt="余日彰 Jih-Chang Yu">
+          </span>
           <span class="collaborator-name">余日彰</span>
           <span class="collaborator-romanization">Jih-Chang Yu</span>
         </a>
         <a class="collaborator" href="https://scholar.google.com/citations?user=fhwVmvMAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">
           <span class="collaborator-photo collaborator-photo--huang">
-            <img src="assets/collaborator-yi-ting-huang.jpeg" width="96" height="128" alt="黃意婷 Yi-Ting Huang">
+            <img src="assets/collaborator-yi-ting-huang-portrait.webp" width="450" height="600" alt="黃意婷 Yi-Ting Huang">
           </span>
           <span class="collaborator-name">黃意婷</span>
           <span class="collaborator-romanization">Yi-Ting Huang</span>
