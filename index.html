@@ -66,6 +66,8 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      position: relative;
+      top: -12px;
     }
 
     .site-title {
@@ -234,7 +236,7 @@
     @media (max-width: 620px) {
       body { background-attachment: scroll; background-position: 62% center; }
       .page { width: min(100% - 36px, 860px); padding-top: 34px; }
-      .topbar { gap: 8px; }
+      .topbar { gap: 8px; top: 0; }
       .site-title {
         gap: 8px;
         font-size: clamp(.82rem, 4.3vw, 1.4rem);
