@@ -123,7 +123,7 @@
     }
 
     main {
-      margin: auto 0;
+      margin: 0;
       padding: clamp(72px, 13vh, 138px) 0;
     }
 
@@ -200,6 +200,7 @@
     }
 
     footer {
+      margin-top: auto;
       color: var(--quiet);
       font-size: .76rem;
       font-weight: 300;
@@ -240,13 +241,13 @@
       .site-logo { width: 46px; height: 46px; }
       .tabs { gap: 5px; transform: none; }
       .tab { width: 40px; height: 40px; font-size: .9rem; }
-      main { padding: 16vh 0 14vh; }
+      main { margin: auto 0; padding: 16vh 0 14vh; }
       h1 {
         font-size: clamp(2.6rem, 13vw, 5rem);
         white-space: nowrap;
       }
       .bio { line-height: 1.75; }
-      footer { font-size: .78rem; }
+      footer { margin-top: 0; font-size: .78rem; }
     }
 
     @media (prefers-reduced-motion: reduce) {
