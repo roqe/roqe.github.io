@@ -53,7 +53,7 @@
     }
 
     .page {
-      width: min(760px, calc(100% - 48px));
+      width: min(860px, calc(100% - 48px));
       min-height: 100svh;
       margin: 0 auto;
       padding: clamp(42px, 7vh, 76px) 0 44px;
@@ -93,12 +93,12 @@
       display: flex;
       gap: 8px;
       flex: 0 0 auto;
-      transform: translateY(2px);
+      transform: translateY(3px);
     }
 
     .tab {
-      width: 44px;
-      height: 44px;
+      width: 50px;
+      height: 50px;
       padding: 0;
       border: 1px solid var(--line);
       border-radius: 50%;
@@ -107,7 +107,7 @@
       justify-content: center;
       color: var(--soft);
       font-family: var(--serif);
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 600;
       letter-spacing: .025em;
       line-height: 1;
@@ -159,7 +159,7 @@
     }
 
     .recruitment {
-      max-width: 680px;
+      max-width: 760px;
       margin: 38px 0 0;
       color: var(--soft);
       font-size: clamp(1rem, 1.6vw, 1.08rem);
@@ -199,7 +199,7 @@
 
     .contact {
       margin: 0;
-      max-width: 680px;
+      max-width: 760px;
     }
 
     .email {
@@ -212,7 +212,7 @@
 
     @media (max-width: 620px) {
       body { background-attachment: scroll; background-position: 62% center; }
-      .page { width: min(100% - 36px, 760px); padding-top: 34px; }
+      .page { width: min(100% - 36px, 860px); padding-top: 34px; }
       .topbar { gap: 8px; }
       .site-title {
         gap: 8px;
