@@ -214,6 +214,17 @@
 
     .email:hover { color: var(--text); }
 
+    @media (min-width: 621px) {
+      .page { position: relative; min-height: max(100svh, 840px); }
+      main {
+        position: absolute;
+        top: 220px;
+        left: 0;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
     @media (max-width: 620px) {
       body { background-attachment: scroll; background-position: 62% center; }
       .page { width: min(100% - 36px, 860px); padding-top: 34px; }
