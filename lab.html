@@ -174,6 +174,54 @@
     .recruitment p { margin: 0; }
     .recruitment p + p { margin-top: 1.15em; }
 
+    .collaborators {
+      display: flex;
+      gap: clamp(28px, 5vw, 52px);
+      margin-top: 26px;
+    }
+
+    .collaborator {
+      width: 142px;
+      color: var(--text);
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .collaborator img {
+      display: block;
+      width: 116px;
+      height: 116px;
+      margin: 0 auto 12px;
+      border: 1px solid rgba(242, 232, 240, .48);
+      border-radius: 50%;
+      object-fit: cover;
+      transition: border-color .2s ease, transform .2s ease;
+    }
+
+    .collaborator:hover img {
+      border-color: rgba(242, 232, 240, .9);
+      transform: translateY(-2px);
+    }
+
+    .collaborator-name,
+    .collaborator-romanization {
+      display: block;
+    }
+
+    .collaborator-name {
+      font-size: .9rem;
+      font-weight: 400;
+      letter-spacing: .08em;
+    }
+
+    .collaborator-romanization {
+      margin-top: 2px;
+      color: var(--quiet);
+      font-family: var(--serif);
+      font-size: .88rem;
+      line-height: 1.25;
+    }
+
     .contact-link {
       display: inline-block;
       margin-top: 34px;
@@ -244,6 +292,9 @@
         white-space: nowrap;
       }
       .recruitment { line-height: 1.75; }
+      .collaborators { gap: 18px; }
+      .collaborator { width: 126px; }
+      .collaborator img { width: 104px; height: 104px; }
       footer { margin-top: 0; font-size: .78rem; }
     }
 
@@ -273,13 +324,20 @@
           We welcome curious students and researchers interested in bioinformatics,
           biostatistics, causal inference, and statistical genetics.
         </p>
-        <p>
-          Opportunities may include research projects, graduate training, and collaboration.
-          More details will be added soon. If our research directions resonate with you,
-          please feel free to get in touch.
-        </p>
       </div>
-      <a class="contact-link" href="mailto:junelai@stat.sinica.edu.tw">Contact us</a>
+      <div class="fields" aria-label="Collaborators"><span class="field">#collaborator</span></div>
+      <div class="collaborators">
+        <a class="collaborator" href="https://scholar.google.com/citations?user=FOGHobwAAAAJ" target="_blank" rel="noreferrer">
+          <img src="assets/collaborator-yen-tsung-huang.webp" width="116" height="116" alt="黃彥棕 Yen-Tsung Huang">
+          <span class="collaborator-name">黃彥棕</span>
+          <span class="collaborator-romanization">Yen-Tsung Huang</span>
+        </a>
+        <a class="collaborator" href="https://scholar.google.com/citations?user=hpIa2IgAAAAJ" target="_blank" rel="noreferrer">
+          <img src="assets/collaborator-jih-chang-yu.webp" width="116" height="116" alt="余日彰 Jih-Chang Yu">
+          <span class="collaborator-name">余日彰</span>
+          <span class="collaborator-romanization">Jih-Chang Yu</span>
+        </a>
+      </div>
     </main>
 
     <footer>
