@@ -176,6 +176,7 @@
 
     .collaborators {
       display: flex;
+      flex-wrap: wrap;
       gap: clamp(28px, 5vw, 52px);
       margin-top: 26px;
     }
@@ -198,9 +199,59 @@
       transition: border-color .2s ease, transform .2s ease;
     }
 
+    .collaborator-photo {
+      display: block;
+      width: 116px;
+      height: 116px;
+      margin: 0 auto 12px;
+      overflow: hidden;
+      border: 1px solid rgba(242, 232, 240, .48);
+      border-radius: 50%;
+      transition: border-color .2s ease, transform .2s ease;
+    }
+
+    .collaborator-photo img {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+      object-fit: cover;
+      transition: none;
+    }
+
+    .collaborator-photo--huang img {
+      object-position: 50% 20%;
+      transform: scale(2.05);
+      transform-origin: 50% 27%;
+    }
+
+    .collaborator-photo--su img {
+      object-position: 52% 18%;
+      transform: scale(2.15);
+      transform-origin: 52% 26%;
+    }
+
     .collaborator:hover img {
       border-color: rgba(242, 232, 240, .9);
       transform: translateY(-2px);
+    }
+
+    .collaborator:hover .collaborator-photo {
+      border-color: rgba(242, 232, 240, .9);
+      transform: translateY(-2px);
+    }
+
+    .collaborator:hover .collaborator-photo img {
+      border-color: transparent;
+    }
+
+    .collaborator:hover .collaborator-photo--huang img {
+      transform: scale(2.05);
+    }
+
+    .collaborator:hover .collaborator-photo--su img {
+      transform: scale(2.15);
     }
 
     .collaborator-name,
@@ -294,7 +345,8 @@
       .recruitment { line-height: 1.75; }
       .collaborators { gap: 18px; }
       .collaborator { width: 126px; }
-      .collaborator img { width: 104px; height: 104px; }
+      .collaborator > img,
+      .collaborator-photo { width: 104px; height: 104px; }
       footer { margin-top: 0; font-size: .78rem; }
     }
 
@@ -332,10 +384,24 @@
           <span class="collaborator-name">黃彥棕</span>
           <span class="collaborator-romanization">Yen-Tsung Huang</span>
         </a>
-        <a class="collaborator" href="https://scholar.google.com/citations?user=hpIa2IgAAAAJ" target="_blank" rel="noreferrer">
+        <a class="collaborator" href="https://scholar.google.com/citations?user=33LmghAAAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noreferrer">
           <img src="assets/collaborator-jih-chang-yu.webp" width="116" height="116" alt="余日彰 Jih-Chang Yu">
           <span class="collaborator-name">余日彰</span>
           <span class="collaborator-romanization">Jih-Chang Yu</span>
+        </a>
+        <a class="collaborator" href="https://scholar.google.com/citations?user=fhwVmvMAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">
+          <span class="collaborator-photo collaborator-photo--huang">
+            <img src="assets/collaborator-yi-ting-huang.jpeg" width="96" height="128" alt="黃意婷 Yi-Ting Huang">
+          </span>
+          <span class="collaborator-name">黃意婷</span>
+          <span class="collaborator-romanization">Yi-Ting Huang</span>
+        </a>
+        <a class="collaborator" href="https://scholar.google.com/citations?user=TPh17sEAAAAJ&amp;hl=en" target="_blank" rel="noreferrer">
+          <span class="collaborator-photo collaborator-photo--su">
+            <img src="assets/collaborator-jia-ying-su.jpeg" width="72" height="128" alt="蘇家瑩 Jia-Ying Su">
+          </span>
+          <span class="collaborator-name">蘇家瑩</span>
+          <span class="collaborator-romanization">Jia-Ying Su</span>
         </a>
       </div>
     </main>
